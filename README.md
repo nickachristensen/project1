@@ -1,5 +1,5 @@
 # project1
-workout app - project with Nick
+workout app project -Group 1: Nick & Kolt
 
 
 E.g. As a user, I want to be able to:

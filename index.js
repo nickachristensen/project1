@@ -25,8 +25,12 @@ function renderObj(obj) {
     newExercise.id = obj.target
     list.append(newExercise)
 
-    newExercise.addEventListener('hover', event => {
+    newExercise.addEventListener('click', event => {
         const exerciseId = obj.id
-        fetch(`http://`)
+        fetch(`https://exercisedb.p.rapidapi.com/exercises/${exerciseId}`)
+        .then((resp) => resp.json())
+        .then(obj => {
+            featureExercise(obj)
+        })
     })
 }

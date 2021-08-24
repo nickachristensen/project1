@@ -30,6 +30,7 @@ p {
     text-align: justify;
     margin-left: .5in;
     margin-right: .5in;
+    background-color: rgba(198, 88, 48, .4);
 }
 
 ul {

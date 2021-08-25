@@ -13,9 +13,12 @@ fetch(APIURL, {
 })
 .then(resp => resp.json())
 .then(arr => {
-    arr.forEach(obj => {
+    console.log(arr)
+    let uniqueTargets = [...new Set(arr.map(exercise => exercise.target))]
+    uniqueTargets.forEach(targetString => {
+
         const exerciseSearches = document.createElement('option')
-        exerciseSearches.textContent = obj.target
+        exerciseSearches.textContent = targetString
         const searchList = document.querySelector("#exercises")
         searchList.append(exerciseSearches)
         
@@ -39,7 +42,7 @@ const searchForm = document.getElementById('search-form')
             list.removeChild(list.firstChild);
         }
 
-        const submitValue = event.target.exercises.value
+        const submitValue = event.target[0].value
         console.log(submitValue)
         
 fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${submitValue}`, {
@@ -54,7 +57,8 @@ fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${submitValue}`, {
             arr.forEach(obj => {
                  renderExercises(obj);
                  console.log(obj.length)
-            })           
+            })
+         searchForm.reset()             
      })
 })
 

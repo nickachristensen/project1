@@ -2,25 +2,25 @@
 
 const button = document.getElementById('submitButton')
 const list = document.getElementById('fetchedData')
-
 const APIURL = "https://exercisedb.p.rapidapi.com/exercises"
 
-// fetch(APIURL, {
-//    "method": "GET",
-//    "headers": {
-//        "x-rapidapi-host": "exercisedb.p.rapidapi.com",
-//        "x-rapidapi-key": "9074bf701emsh2b8696dac91ac18p161ae0jsn7153acb84d2d"
-//    }
-// })
-// .then(resp => resp.json())
-// .then(arr => {
-//     arr.forEach(obj => {
-//         renderExercises(obj)
-// });
-// })
-
-// user searches api for exercises
-// only pull like matches
+fetch(APIURL, {
+   "method": "GET",
+   "headers": {
+       "x-rapidapi-host": "exercisedb.p.rapidapi.com",
+       "x-rapidapi-key": "9074bf701emsh2b8696dac91ac18p161ae0jsn7153acb84d2d"
+   }
+})
+.then(resp => resp.json())
+.then(arr => {
+    arr.forEach(obj => {
+        const exerciseSearches = document.createElement('option')
+        exerciseSearches.textContent = obj.target
+        const searchList = document.querySelector("#exercises")
+        searchList.append(exerciseSearches)
+        
+    })
+})
 
 
 
@@ -31,29 +31,62 @@ function renderExercises(obj) {
 
 }
 const searchForm = document.getElementById('search-form')
-   
+
     searchForm.addEventListener('submit', event => {
         event.preventDefault()
-        const submitValue = event.target.search.value
+        
+        while (list.firstChild) {
+            list.removeChild(list.firstChild);
+        }
+
+        const submitValue = event.target.exercises.value
         console.log(submitValue)
         
-        fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${submitValue}`, {
+fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${submitValue}`, {
         "method": "GET",
            "headers": {
                "x-rapidapi-host": "exercisedb.p.rapidapi.com",
                "x-rapidapi-key": "9074bf701emsh2b8696dac91ac18p161ae0jsn7153acb84d2d"
            }
-        })
+        })   
         .then(resp => resp.json())
         .then(arr => {
             arr.forEach(obj => {
-                if (submitValue !== obj.target.value) {
-                    renderExercises(obj);
-                }
-                else {
-                    alert('Please search again');
-                }
-                console.log(obj.length)
+                 renderExercises(obj);
+                 console.log(obj.length)
+            })           
      })
-    })
 })
+
+
+
+ 
+        
+
+//  const promise1 = fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${submitValue}`, {
+// 	    "method": "GET",
+// 	     "headers": {
+// 		    "x-rapidapi-host": "exercisedb.p.rapidapi.com",
+// 		    "x-rapidapi-key": "9f7133ba3dmsh3c132d75638fd83p14a77bjsna10aef0a38ad"
+// 	}
+// })
+
+//     const promise2 = fetch(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${submitValue}`, {
+// 	    "method": "GET",
+// 	     "headers": {
+// 		    "x-rapidapi-host": "exercisedb.p.rapidapi.com",
+// 		    "x-rapidapi-key": "9f7133ba3dmsh3c132d75638fd83p14a77bjsna10aef0a38ad"
+// 	}
+// })
+    
+//     const promise3 = fetch(`https://exercisedb.p.rapidapi.com/exercises/equipment/${submitValue}`, {
+// 	    "method": "GET",
+// 	     "headers": {
+// 		    "x-rapidapi-host": "exercisedb.p.rapidapi.com",
+// 		    "x-rapidapi-key": "9f7133ba3dmsh3c132d75638fd83p14a77bjsna10aef0a38ad"
+// 	}
+// })
+
+//     const promises = [promise1, promise2, promise3];
+   
+//    Promise.race(promises)

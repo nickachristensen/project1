@@ -1,50 +1,260 @@
-/* style.css */
-
-
 body {
+
     font-family: Noah, Arial, sans-serif;
     background-image: url('basketball-1920x1080.png');
     
 }
 
-#welcome {
-    font-weight: bold;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-  }
-
 h1 {
+
     text-align: center;  
     background-color: rgb(42, 44, 46);
     color: burlywood;
-}
+    font-size: 50px;
 
-h2 {
-    font-size: 15px;
 }
 
 p {
-    font-size: 22px;
+
+    font-size: 25px;
     text-indent:0.5in;
     text-align: justify;
     margin-left: .5in;
     margin-right: .5in;
     background-color: rgba(198, 88, 48, .65);
+    border: 5px solid rgb(42, 44, 46);
+    padding: 10px;
+
+}
+
+form#search-form {
+
+    text-align: center;
+    font-size: 48px;
+
+}
+
+form.button:hover {
+
+    box-shadow: 0 8px 16px 0 rgba(1,1,1,.385);
+
+}
+
+.container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 ul {
-    float: left;
-    color: blanchedalmond;
-    font-size: 20px;
+    
+    box-sizing: border-box;
+    margin: 10px 10px 0 0;
+    outline: 1px dotted red;
+    width: calc(1/3*100% - (1 - 1/3)*10px);
+    color:blanchedalmond;
+    background-color: rgba(198,88,48,.65);
+    font-size: 24px;
+    border: 5px solid rgb(42, 44, 46);
+    padding: 10px;
+    width: 800px;
+    border-radius: .5em;
+    text-align: center;
+
 }
 
-form#routine {
-    float:right;
-    margin-right: 1.5in;
+ul li {
+
+    padding-left: 10px;
+    text-indent: .25in;
+
 }
 
+ul li:hover {
+
+    box-shadow: 0 8px 16px 0 rgba(1,1,1,.385);
+    line-height: 20px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+div#feature {
+
+    box-sizing: border-box;
+    margin: 10px 10px 0 0;
+    outline: 1px dotted red;
+    width: calc(1/3*100% - (1 - 1/3)*10px);
+    color:blanchedalmond;
+    background-color: rgba(198,88,48,.65);
+    font-size: 24px;
+    border: 5px solid rgb(42, 44, 46);
+    padding: 10px;
+    width: 800px;
+    border-radius: .5em;
+    text-align: center;
+
+}
+
+img {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+div#feature button {
+
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid rgb(42, 44, 46);
+    border-radius: 0.4em;
+    color: rgb(42, 44, 46);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: .5;
+    margin: 20px;
+    padding: .5em 1em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+
+}
+  
+div#feature button:hover, .btn:focus {
+
+    color: #fff;
+    outline: 0;
+
+}
+
+div#feature button {
+
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+
+}
+
+div#feature button:hover {
+
+    box-shadow: 0 0 40px 40px rgb(42, 44, 46) inset;
+
+}
+
+div#feature button {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+}
+  
+#myRoutine {
+
+    box-sizing: border-box;
+    margin: 10px 10px 0 0;
+    outline: 1px dotted red;
+    width: calc(1/3*100% - (1 - 1/3)*10px);
+    color:blanchedalmond;
+    background-color: rgba(198,88,48,.65);
+    font-size: 24px;
+    border: 5px solid rgb(42, 44, 46);
+    padding: 10px;
+    width: 800px;
+    border-radius: .5em;
+    text-align: center;
+
+}
+
+#favouriteBtn {
+    position: relative;
+    top: 1px;
+}
+
+#myRoutine button {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid rgb(42, 44, 46);
+    border-radius: 0.4em;
+    color: rgb(42, 44, 46);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: .5;
+    margin: 20px;
+    padding: .5em 1em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+  
+#myRoutine button:hover, .btn:focus {
+    color: #fff;
+    outline: 0;
+}
+  
+#myRoutine button {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#myRoutine button:hover {
+    box-shadow: 0 0 40px 40px rgb(42, 44, 46) inset;
+}
+
+#myRoutine button {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+}
+
+.favourites {
+    
+    box-sizing: border-box;
+    margin: 10px 10px 0 0;
+    outline: 1px dotted red;
+    width: calc(100% - (1 - 1/2)*10px);
+    height: 500px;
+    color:blanchedalmond;
+    background-color: rgba(198,88,48,.65);
+    font-size: 24px;
+    border: 5px solid rgb(42, 44, 46);
+    padding: 10px;
+    border-radius: .5em;
+    text-align: center;
+
+}

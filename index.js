@@ -185,7 +185,6 @@ const favouriteBox = document.querySelector('div.favourites')
 favouriteBox.addEventListener('click', e => {
     const featureExercise = e.target.childNodes[0].textContent
     renderFeaturedExercise()
-    console.log(featureExercise)
 
 function renderFeaturedExercise() {
     fetch(`https://exercisedb.p.rapidapi.com/exercises/name/${featureExercise}`, {

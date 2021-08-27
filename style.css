@@ -9,7 +9,7 @@ h1 {
 
     text-align: center;  
     background-color: rgb(42, 44, 46);
-    color: burlywood;
+    color: rgb(240, 216, 185);
     font-size: 2.4vw;
 
 }
@@ -22,9 +22,92 @@ p {
     text-align: justify;
     margin-left: .5in;
     margin-right: .5in;
-    background-color: rgba(198, 88, 48, .65);
+    background-color: rgba(41, 108, 175, 0.6);
+    color: rgb(240, 234, 224);
     border: .3vw solid rgb(42, 44, 46);
     padding: 10px;
+
+}
+
+#instructions {
+    text-align: center;
+    color: blanchedalmond;
+    font-size: 1.8vw;
+    font-weight: 700;
+}
+
+input#dataList {
+    
+    background-image: url('arrowsslider.jpeg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 12vw;
+    height: 1.4vw;
+    border-radius: 1em;
+    border: .3vw solid rgb(42, 44, 46);
+
+}
+
+
+input#search-button {
+
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: rgba(198, 88, 48, .65);
+    border: .2vw solid rgb(46, 46, 42);
+    border-radius: 1em;
+    color: rgba(241, 200, 145, 0.863);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: .4;
+    margin: 20px;
+    padding: .5em 1em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    
+
+}
+
+input#search-button:hover, .btn:focus {
+
+    color: #fff;
+    outline: 0;
+
+}
+
+input#search-button {
+
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+
+}
+
+input#search-button {
+
+    box-shadow: 0 0 40px 40px rgb(42, 44, 46) inset;
+
+}
+
+input#search-button {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
 
 }
 
@@ -55,24 +138,25 @@ ul {
     margin: 1.2vw 1.2vw 0 0;
     width: calc(1/3*100% - (1 - 1/3)*1.2vw);
     color:blanchedalmond;
-    background-color: rgba(198,88,48,.65);
+    background-color: rgba(219, 223, 20, 0.65);
     font-size: 1vw;
     border: .5vw solid rgb(42, 44, 46);
     padding: .8vw;
     width: 2vw;
     border-radius: .5em;
     text-align: center;
+    box-shadow: 0 .6vw 1vw 0 rgba(1,1,1,.385);
 
 }
 
-ul li {
+ul#fetchedData li {
 
     padding-left: .6vw;
     text-align: left;
 
 }
 
-ul li:hover {
+ul#fetchedData li:hover {
 
     box-shadow: 0 .6vw 1vw 0 rgba(1,1,1,.385);
     box-sizing: border-box;
@@ -88,8 +172,9 @@ div#feature {
     box-sizing: border-box;
     margin: 1.2vw 1.2vw 0 0;
     width: calc(1/3*100% - (1 - 1/3)*10px);
-    color:blanchedalmond;
-    background-color: rgba(198,88,48,.65);
+    color: rgb(70, 83, 95);
+    background-image: url('backgroundwood.jpeg');
+    background-size: cover;
     font-size: 1vw;
     font-weight: lighter;
     border: .5vw solid rgb(42, 44, 46);
@@ -97,7 +182,8 @@ div#feature {
     width: 800px;
     border-radius: .5em;
     text-align: center;
-
+    box-shadow: 0 1.6vw 2vw 0 rgba(1,1,1,.385);
+    padding-top: .5in;
 }
 
 img {
@@ -106,19 +192,21 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    border: .4vw solid rgba(42, 44, 46, .75);
+    box-shadow: 0 1.2vw 1.4vw 0 rgba(1,1,1,.385);
 
 }
 
-div#feature button {
+button {
 
     box-sizing: border-box;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
-    background-color: rgba(198, 88, 48, .65);
+    background-color: transparent;
     border: 2px solid rgb(42, 44, 46);
     border-radius: 1em;
-    color: rgb(42, 44, 46);
+    color: rgb(0, 0, 0);
     cursor: pointer;
     display: -webkit-box;
     display: -webkit-flex;
@@ -137,35 +225,36 @@ div#feature button {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    box-shadow: 0 .6vw 1vw 0 rgba(1,1,1,.385);
 
 }
   
-div#feature button:hover, .btn:focus {
+button:hover, .btn:focus {
 
     color: #fff;
     outline: 0;
 
 }
 
-div#feature button {
+button {
 
     -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 
 }
 
-div#feature button:hover {
+button:hover {
 
     box-shadow: 0 0 40px 40px rgb(42, 44, 46) inset;
 
 }
 
-div#feature button {
+button {
 
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 35%;
 
 }
   
@@ -175,81 +264,42 @@ div#feature button {
     margin: 1.2vw 1.2vw 0 0;
     width: calc(1/3*100% - (1 - 1/3)*10px);
     color:blanchedalmond;
-    background-color: rgba(198,88,48,.65);
+    background-color: rgba(48, 198, 93, 0.65);
     font-size: 1vw;
+    font-weight: 900;
     border: .5vw solid rgb(42, 44, 46);
     padding: .8vw;
     width: 2vw;
     border-radius: .5em;
     text-align: center;
+    box-shadow: 0 .6vw 1vw 0 rgba(1,1,1,.385);
 
 }
+
+
+#myRoutine li  {
+    
+    color: rgb(225, 228, 236);
+    border: .2vw solid rgba(218, 255, 8, 0.7);
+    border-radius: 1em;
+    
+  }
+
+#myRoutine li:hover {
+
+    border: 3px dotted black;
+    color: black;
+    background: rgba(151, 75, 201, 0.671);
+    cursor: pointer;
+
+}
+
 
 #favouriteBtn {
 
-    position: relative;
+    position: inline;
     top: 1px;
     
-}
-
-#myRoutine button {
-
-    box-sizing: border-box;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    background-color: rgba(198, 88, 48, .65);
-    border: 2px solid rgb(42, 44, 46);
-    border-radius: 1em;
-    color: rgb(42, 44, 46);
-    cursor: pointer;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: .5;
-    margin: 20px;
-    padding: .5em 1em;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: Noah, sans-serif;
-    font-weight: 700;
-
-}
-  
-#myRoutine button:hover, .btn:focus {
-
-    color: #fff;
-    outline: 0;
-
-}
-  
-#myRoutine button {
-
-    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-
-}
-
-#myRoutine button:hover {
-
-    box-shadow: 0 0 40px 40px rgb(42, 44, 46) inset;
-
-}
-
-#myRoutine button {
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-
 }
 
 .favourites {
@@ -257,12 +307,13 @@ div#feature button {
     box-sizing: border-box;
     margin: 10px 10px 0 0;
     width: calc(100% - (1 - 1/2)*10px);
-    height: 500px;
+    height: 600px;
     color:blanchedalmond;
-    background-color: rgba(198,88,48,.65);
-    font-size: 1vw;
+    background-color: rgba(0, 99, 228, 0.65);
+    font-size: 1.2vw;
     border: .5vw solid rgb(42, 44, 46);
-    padding: .8vw;
+    padding: 1vw;
+    padding-top: 2vw;
     border-radius: .5em;
     text-align: center;
     
@@ -270,7 +321,7 @@ div#feature button {
 
 div.favourites li {
 
-    text-align: left;
+    text-align: center;
     width: 15vw;
     margin-bottom: 1em;
     display: inline;
@@ -279,5 +330,8 @@ div.favourites li {
     line-height: inherit;
     padding: .6vw;
     float: left;
+
+    color: rgb(24, 199, 103);
+    font-weight: bolder;
 
 }
